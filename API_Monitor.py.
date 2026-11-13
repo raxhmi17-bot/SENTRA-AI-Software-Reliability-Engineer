@@ -1,0 +1,51 @@
+
+import urllib.request
+import time
+import json
+
+print("==============================")
+print("      SENTRA AI SYSTEM")
+print("       API MONITORING")
+print("==============================")
+
+url = input("Enter API URL: ")
+
+try:
+    start = time.time()
+
+    response = urllib.request.urlopen(
+        url, timeout=10
+    )
+
+    data = response.read().decode("utf-8")
+
+    end = time.time()
+
+    response_time = (end - start) * 1000
+
+    print("\nSENTRA API REPORT")
+    print("------------------------------")
+    print("Status Code:", response.status)
+    print("Response Time:",
+          round(response_time, 2), "ms")
+
+    if response.status == 200:
+        print("API Status: HEALTHY")
+    else:
+        print("API Status: CHECK REQUIRED")
+
+    print("\nAPI Response Data:")
+    try:
+        print(json.dumps(
+            json.loads(data),
+            indent=2
+        )[:1000])
+    except json.JSONDecodeError:
+        print(data[:1000])
+
+except Exception as e:
+    print("\nSENTRA API ALERT!")
+    print("API Status: UNHEALTHY")
+    print("Error:", e)
+
+print("\nAPI Monitoring Completed.")
