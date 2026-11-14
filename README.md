@@ -11,6 +11,10 @@ An intelligent software reliability monitoring project built using Python. SENTR
 - Health Status Reporting
 - Error Detection and Alerts
 - API Response Data Display
+- - Continuous Website Monitoring
+- Real-Time Status Checking
+- Response Time Tracking
+- Continuous Health Reporting
 
 🛠️ Technologies Used
 
@@ -25,6 +29,7 @@ An intelligent software reliability monitoring project built using Python. SENTR
 - "Main.py" – Website Health Monitoring
 - "API_Monitor.py" – API Monitoring
 - "README.md" – Project Documentation
+- - "Continuous_Monitor.py" – Continuous Website Monitoring
 
 ▶️ How to Run
 
@@ -34,6 +39,7 @@ An intelligent software reliability monitoring project built using Python. SENTR
 4. Run "Main.py" to monitor a website.
 5. Run "API_Monitor.py" to monitor an API.
 6. Enter a valid website or API URL.
+7. 7. Run "Continuous_Monitor.py" for continuous monitoring.
 
 📊 Sample Output
 
